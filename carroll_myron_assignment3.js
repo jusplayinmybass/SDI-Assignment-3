@@ -1,43 +1,36 @@
 alert("JavaScript works!")
 
-;	//For loop	
-for (var i=0, m = musicians.length; i< m; i++){
-	console.log(musicians[i] + " is scheduled for " +times[i]+ " on " +instruments[i]+ ".")
+var say = function (message){
+	console.log(message);
 };
-console.log("After I get the instruments laid down. I have the Background Vocals to do.");
-console.log("I have the 2 female singers booked. I just have to see if Jason can sing the male part")
-//Boolean Function
-var javail=true
-if (javail=true){
-	console.log("Jason is available, I don't have to sing the male parts. I am really out of practice")
-	}else{
-	console.log("Oh well, Jason is not available. I have to man up and sing these parts. That's why they pay me the big bucks.")	
+
+var budget = 2000,
+	balance = 2000,
+	studio = 500;
+
+say("I have finished recording the new single for a new artist.");
+say("Now I have to mix and master the record.");
+say("Then I will need to get the credits together for the packaging.");
+say("Finally, I need to decide whether I want to do the cover art myself or hire someone else to do it.");
+say("First step is to mix the project. My total project budget was $" + budget+ ".");
+say("I am waiting to receive invoices from each of the musicians");
+say("Now I have to pay the people that make me sound good:");
+var payInvoice = function (invoice) {
+	var bud = budget, 
 };
-console.log("Now I need to have a rough mix done to the song and have it bounced so I can put it on a CD to listen to in the car.")
-console.log("Because the software we are using is Pro Tools, it has to bounce in real time.")
-//While loop
-var songlength = 230
-console.log("The song is " +songlength+ " seconds long. Let's start the timer.")
-while (songlength >= 0) {
-	console.log("I now have " +songlength+ " seconds remaining.")
-	songlength--
-};
-//Object
-var key = "interests";
-console.log(student[key]);
-console.log(student.id);
-console.log(student.interests);
-console.log(student.sayHi);
-console.log(student["sayHi"]);
-student.sayHi();
-student["sayHi"]();
-student.sayHi = function  () {
-	console.log("Get Lost!");
+
+say("I already paid the recording studio $" + studio + " at the end of the recording session.");
+
+
+
+
+
+
+var handleData = function (json) {
+	for (var i = 0; i < json.musicians.length; i++){
+	var musician = json.musicians[i];
+	console.log("Instrument: " + musician.instrument + ", Name: " + musician.name + ", Endorses: " + musician.endorsements + ".")
 	};
-student["sayHi"]();
-
-//This outputs everything as a string:
-for (var key in student) {
-	console.log("key:" + key + " value:  " + student[key])
-
 };
+
+handleData(json2);
