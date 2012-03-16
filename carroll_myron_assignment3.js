@@ -7,7 +7,7 @@ var say = function (message){
 var budget = 2000,
 	studio = 500,
 	getStudio = false,
-	doCover = true;
+	doCover = false;
 
 say("I have finished recording the new single for a new artist.");
 say("Now I have to mix and master the record.");
@@ -35,7 +35,7 @@ say("I have a different studio in mind for this. It is one that is near my house
 
 
 
-if (getStudio = true){
+if (getStudio === true){
 	say("I called Dogwood Studios and they have a slot available today");
 }else{
 	console.log("I couldn't get the studio I wanted, so I have to get some suggestions for places to mix.")
@@ -74,13 +74,14 @@ var mixAllTracks = function(trackNames, minutesPerTrack){
 mixAllTracks(trackNamesbyInstrument, wholeMinutesPerTrack);
 say("I will send this off to be mastered this tonight. this will take another day to complete.");
 say("While that's being done, I must get the credits together to put in the cover art and decide if I even want to do the cover art.");
-if (doCover = false){
-	say("I'm kinda tired. After all this work, I can spend the money to have a friend go the cover art. It's no big deal");
+if (doCover === false){
+	say("I'm kinda tired. After all this work, I can spend the money to have a friend go the cover art pretty quick. It's no big deal");
 }else{
 	say("I am feeling kinda cheap. If I go ahead and do the cover art, I can keep this money. I'll sleep when I die")
 };
 
-
+say("Now to put down the information for the credits.");
+say("Because I am dealing with professionals, In addition to their name and instrument they play, I must also include the companies they are endorsed by.");
 
 var handleData = function (json) {
 	for (var i = 0; i < json.musicians.length; i++){
@@ -90,10 +91,4 @@ var handleData = function (json) {
 };
 
 handleData(json2);
-
-var javail=false
-if (javail=true){
-	console.log("Jason is available, I don't have to sing the male parts. I am really out of practice")
-	}else{
-	console.log("Oh well, Jason is not available. I have to man up and sing these parts. That's why they pay me the big bucks.")	
-};
+say("So I have everything I need for the finished product. I am feeling quite accomplished right now.");
