@@ -5,8 +5,8 @@ var say = function (message){
 };
 
 var budget = 2000,
-	studio = 500
-	
+	studio = 500,
+	dogwood = true
 
 say("I have finished recording the new single for a new artist.");
 say("Now I have to mix and master the record.");
@@ -31,14 +31,20 @@ say("I already paid the recording studio $" + studio + " at the end of the recor
 say("Now I must mix the record. I can do this myself. But I need to book more studio time.");
 say("I figure that I can get a really good mix on the record in 4 hours. And I need to do this today.");
 say("So I need to find a studio that is available today.");
+say("I have a different studio in mind for this. It is one that is near my house and I have heard some really good mixes come out of there.");
 
-var bookStudio = ["Doppler", "Patchwork", "Crossover"],
-	studioavail = [false, false, true],
-	i = 0;
-while (studioavail = false) {
-	say("I called " + bookStudio[i] + " and they are not available.")
-	i++
-say("Now that I have " + bookStudio[i] + " booked, I can get started with my mix.");
+if (dogwood = true) {
+	say("I called Dogwood Studios and they have a slot available today");
+} 
+else {
+	say("I couldn't get the studio I wanted, so I have to call around to some other spots.")
+	var studios = ["Doppler", "Patchwork", "Crossover"];
+  studioavail = ["not available", "available", "available"];
+for (var i=0, a=studios.length; i<a ; i++ ){
+	say("I called " +studios[i]+ " Studios and they said that they are " +studioavail[i]+ " in that time frame")
+};
+
+};
 
 
 
